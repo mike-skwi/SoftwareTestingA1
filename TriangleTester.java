@@ -8,15 +8,15 @@ public class TriangleTester{
 		//TODO fix spelling
 
 		if(side1 == side2 && side1 == side3){
-			System.out.println("Equallateral triangle");
+			System.out.println("This is an equilateral triangle.");
 		}
 			// None of the sides are equal
-		else if (side1 != side2 && side1 != side3){
-			System.out.println("Scalene Triangle");
+		else if (side1 != side2 && side1 != side3 && side2 != side3){
+			System.out.println("This is a scalene triangle.");
 		}
 		else{
 			//TODO fix the spelling
-			System.out.println("isoceles");
+			System.out.println("This is an isosceles triangle.");
 		}
 
 
@@ -36,7 +36,14 @@ public class TriangleTester{
 		for(int i = 0; i < 3 ; i++){
 			//TODO This is where I will make the case for negative numbers.
 			System.out.println("\nEnter an integer: ");
-			nums[i] = reader.nextInt();		
+			int enteredNumber = reader.nextInt();		
+			if(enteredNumber > 0){
+				nums[i] = enteredNumber;
+			}
+			else{
+				System.out.println("Enter a non-zero/non-negative number.");
+				i--;
+			}
 			//nums[entered] = n;
 			//entered++;
 		}	
@@ -47,4 +54,3 @@ public class TriangleTester{
 		}
 		
 	}
-
